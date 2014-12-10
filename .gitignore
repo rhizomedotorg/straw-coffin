@@ -1,0 +1,5 @@
+*.DS_Store
+*.pyc
+venv/
+rhiz/static/gen/
+.webassets-cache/

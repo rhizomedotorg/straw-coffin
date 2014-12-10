@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Hello{% endblock %}
+
+{% block content %}
+  <p>Hello {% if name %}{{ name }}{% else %}World{% endif %}!</p>
+{% endblock %}

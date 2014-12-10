@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rhizome - {% block title %}Home{% endblock %}</title>
+    <meta name="description" content="Contemporary art and technology, online since 1996.">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='leyva.gif') }}">
+
+    {% assets 'css_all' %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
+    {% assets 'js_all' %}
+      <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
