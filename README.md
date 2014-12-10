@@ -16,8 +16,17 @@ You will add/edit settings in `~/local_config.py` to override [default config](r
 
 ```
 $ virtualenv venv
-$ source venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
 $ python manage.py db upgrade
 $ python manage.py seed_db
 $ python manage.py runserver
 ```
+
+Useful docs
+----
+
+- [Flask-Security](https://pythonhosted.org/Flask-Security/)
+- [Flask-Assets](http://flask-assets.readthedocs.org/en/latest/)
+- [Flask-FeatureFlags](https://github.com/trustrachel/Flask-FeatureFlags)
+- [Flask-Migrate](https://github.com/miguelgrinberg/Flask-Migrate)
